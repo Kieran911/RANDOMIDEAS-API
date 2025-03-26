@@ -6,5 +6,5 @@ import './css/style.css';
 
 const modal = new Modal();
 const ideaForm = new IdeaForm();
-const IdeaList = new IdeaList();
+const ideaList = new IdeaList();
 ideaForm.render();
