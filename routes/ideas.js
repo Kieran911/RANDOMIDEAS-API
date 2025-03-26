@@ -65,12 +65,10 @@ router.put('/:id', async (req, res) => {
     }
 
     // Username does not match
-    res
-      .status(403)
-      .json({
-        success: false,
-        error: 'You are not authorized to update this resource',
-      });
+    res.status(403).json({
+      success: false,
+      error: 'You are not authorized to update this resource',
+    });
   } catch (error) {
     console.log(error);
     res.status(500).json({ success: false, error: 'Something went wrong' });
@@ -89,12 +87,10 @@ router.delete('/:id', async (req, res) => {
     }
 
     // Usernames do not match
-    res
-      .status(403)
-      .json({
-        success: false,
-        error: 'You are not authorized to delete this resource',
-      });
+    res.status(403).json({
+      success: false,
+      error: 'You are not authorized to delete this resource',
+    });
   } catch (error) {
     console.log(error);
     res.status(500).json({ success: false, error: 'Something went wrong' });
